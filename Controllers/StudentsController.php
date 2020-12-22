@@ -59,7 +59,8 @@ class StudentsController extends Controller
      */
     public function show($id)
     {
-        //
+        $student = Students::find($id);
+        return view('students.show', compact('student'));
     }
 
     /**
